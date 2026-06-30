@@ -175,14 +175,14 @@
       <label for="clienteReferencia" style="margin-top: 15px;">Referencia (Opcional)</label>
       <input type="text" id="clienteReferencia" placeholder="Ej: Algo que destaque tu ubicación (color portón, ventanas, etc.)">
 
-      <div style="margin-top: 15px; text-align: center; background: #2a2a2a; padding: 10px; border-radius: 8px; border: 1px solid #444;">
-        <label style="display: block; margin-bottom: 8px; font-size: 0.9em; color: #fff;">Ubicación para el repartidor</label>
+       <div style="margin-top: 15px; text-align: center; background: #2a2a2a; padding: 10px; border-radius: 8px; border: 1px solid #444;">
+        <label style="display: block; margin-bottom: 8px; font-size: 0.9em; color: #fff;">Ubicación GPS (Opcional)</label>
         
-        <button type="button" id="btnGps" class="btn btn-secondary" onclick="obtenerUbicacion()" style="width: 100%; opacity: 0.5; cursor: not-allowed;" disabled>
+        <button type="button" id="btnGps" class="btn btn-secondary" onclick="obtenerUbicacion()" style="width: 100%;">
           📍 Obtener mi ubicación actual
         </button>
         
-        <p id="gpsStatus" style="font-size: 0.85em; color: #ffaa00; margin-top: 8px;">⚠️ Escribe tu dirección arriba para habilitar el GPS</p>
+        <p id="gpsStatus" style="font-size: 0.85em; color: #aaa; margin-top: 8px;">Si quieres, puedes compartir tu ubicación para ayudarnos a encontrarte.</p>
         <input type="hidden" id="gpsLink" value="">
       </div>
       

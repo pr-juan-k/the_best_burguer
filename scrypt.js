@@ -43,35 +43,35 @@ const menuData = {
     hasVariety: false,
     hasMedallions: true,
     medallionPrice: 2000,
-    maxMedallions: 3,
+    maxMedallions: 5,
     products: {
       comun: {
-        name: 'Bacon Cheddar',
+        name: 'Bacon Cheddar (con papas)',
         price: 10000,
-        ingredients: ['queso cheddar', 'cebolla caramelizada', 'panceta', 'ketchup'],
+        ingredients: ['queso cheddar', 'cebolla', 'panceta', 'ketchup', 'papas fritas'],
         image: 'images/best/bacon.jpg'
       },
       especial: {
-        name: 'Argentina',
+        name: 'Argentina (con papas)',
         price: 10000,
-        ingredients: ['lechuga', 'tomate', 'mayonesa', 'mostaza', 'ketchup', 'huevo'],
+        ingredients: ['lechuga', 'tomate', 'mayonesa', 'mostaza', 'ketchup', 'huevo', 'papas fritas'],
         image: 'images/best/argentina.jpg'
       },
       hamburbumi: {
-        name: 'Cheddar Caramel',
+        name: 'Cheddar Caramel (con papas)',
         price: 10000,
-        ingredients: ['lechuga', 'tomate', 'cebolla caramelizada', 'queso cheddar'],
+        ingredients: ['lechuga', 'tomate', 'cebolla', 'queso cheddar', 'papas fritas'],
         image: 'images/hamburguesa.jpg'
       },
       hamburbumi2: {
-        name: 'Bacon House',
+        name: 'Bacon House (con papas)',
         price: 10000,
-        ingredients: [ 'cebolla caramelizada', 'queso cheddar', 'panceta'],
+        ingredients: [ 'cebolla', 'queso cheddar', 'panceta', 'papas fritas'],
         image: 'images/best/bacon.jpg'
       }
     }
   },
-  pizzas: {
+  pizzas2: {
     name: 'Pizzas',
     image: 'images/pizza.jpg',
     hasVariety: false,
@@ -98,6 +98,33 @@ const menuData = {
         image: 'images/best/p-fugazeta.jpeg'
       }
     }
+  },pizzas: {
+    name: 'Media Pizzas',
+    image: 'images/pizza.jpg',
+    hasVariety: false,
+    isSimple: true,
+    products: {
+      muzzarela: {
+        name: 'Media Pizza Muzzarela',
+        price: 5000,
+        image: 'images/best/p-muzza.jpeg'
+      },
+      especial: {
+        name: 'Media Pizza Especial De Jamon',
+        price: 5500,
+        image: 'images/best/p-jamon.jpeg'
+      },
+      napolitana: {
+        name: 'Media Pizza Napolitana',
+        price: 6000,
+        image: 'images/best/p-napolitana.jpeg'
+      },
+      napolitana2: {
+        name: 'Media Pizza Especial De Fugazeta',
+        price: 6500,
+        image: 'images/best/p-fugazeta.jpeg'
+      }
+    }
   },
   empanadas: {
     name: 'Empanadas',
@@ -108,48 +135,104 @@ const menuData = {
     products: {
       matambre: {
         '12_unidades_c': {
-          name: 'Empanadas de Carne "Horneadas" x12 (cebolla,morron,huevo,aceituna,especias)',
+          name: 'Empanadas de Carne "Horneadas" x12 ',
           price: 13000,
           image: 'images/empanada.jpg'
         },
         '12_unidades_f': {
-          name: 'Empanadas de Carne "Congeladas" x12 (cebolla,morron,huevo,aceituna,especias)',
+          name: 'Empanadas de Carne "Congeladas" x12 ',
           price: 11000,
           image: 'images/empanada.jpg'
         }
       },
       pollo: {
         '12_unidades_c': {
-          name: 'Empanadas de Pollo Horneadas x12 (cebolla,morron,huevo,aceituna,especias)',
+          name: 'Empanadas de Pollo Horneadas x12 ',
           price: 13000,
           image: 'images/empanada.jpg'
         },
         '12_unidades_f': {
-          name: 'Empanadas de Pollo Congeladas x12 (cebolla,morron,huevo,aceituna,especias)',
+          name: 'Empanadas de Pollo Congeladas x12 ',
           price: 11000,
           image: 'images/empanada.jpg'
         }
       },
       ternera_queso: {
         '12_unidades_c': {
-          name: 'Empanadas de Ternera y Queso "Horneadas" x12 (carne de ternera jugosa,cebolla,morron,queso)',
+          name: 'Empanadas de Ternera y Queso "Horneadas" x12 ',
           price: 13000,
           image: 'images/empanada.jpg'
         },
         '12_unidades_f': {
-          name: 'Empanadas de Ternera y Queso "Congeladas" x12 (carne de ternera jugosa,cebolla,morron,queso)',
+          name: 'Empanadas de Ternera y Queso "Congeladas" x12 ',
           price: 11000,
           image: 'images/empanada.jpg'
         }
       },choclo_queso: {
         '12_unidades_c': {
-          name: 'Empanadas de choclo y queso "Horneadas" x12 (choclo dulce,queso fundido,cebolla,bachaamel)',
+          name: 'Empanadas de choclo y queso "Horneadas" x12 ',
           price: 13000,
           image: 'images/empanada.jpg'
         },
         '12_unidades_f': {
-          name: 'Empanadas de Choclo y Queso "Congeladas" x12 (choclo dulce,queso fundido,cebolla,bachaamel)',
+          name: 'Empanadas de Choclo y Queso "Congeladas" x12 ',
           price: 11000,
+          image: 'images/empanada.jpg'
+        }
+      },
+    }
+  },
+  empanadas2: {
+    name: 'Media docena Empanadas',
+    image: 'images/empanada.jpg',
+    hasVariety: true,
+    varieties: ['matambre', 'pollo','ternera_queso','choclo_queso'],
+    isSimple: true,
+    products: {
+      matambre: {
+        '12_unidades_c': {
+          name: 'Empanadas de Carne "Horneadas" x6',
+          price: 7000,
+          image: 'images/empanada.jpg'
+        },
+        '12_unidades_f': {
+          name: 'Empanadas de Carne "Congeladas" x6 ',
+          price: 6000,
+          image: 'images/empanada.jpg'
+        }
+      },
+      pollo: {
+        '12_unidades_c': {
+          name: 'Empanadas de Pollo Horneadas x6 ',
+          price: 7000,
+          image: 'images/empanada.jpg'
+        },
+        '12_unidades_f': {
+          name: 'Empanadas de Pollo Congeladas x6 ',
+          price: 6000,
+          image: 'images/empanada.jpg'
+        }
+      },
+      ternera_queso: {
+        '12_unidades_c': {
+          name: 'Empanadas de Ternera y Queso "Horneadas" x6 ',
+          price: 7000,
+          image: 'images/empanada.jpg'
+        },
+        '12_unidades_f': {
+          name: 'Empanadas de Ternera y Queso "Congeladas" x6 ',
+          price: 6000,
+          image: 'images/empanada.jpg'
+        }
+      },choclo_queso: {
+        '12_unidades_c': {
+          name: 'Empanadas de choclo y queso "Horneadas" x16 ',
+          price: 7000,
+          image: 'images/empanada.jpg'
+        },
+        '12_unidades_f': {
+          name: 'Empanadas de Choclo y Queso "Congeladas" x6 ',
+          price: 6000,
           image: 'images/empanada.jpg'
         }
       },
@@ -168,9 +251,34 @@ const menuData = {
         name: 'Papas Con Cheddar Y Bacon',
         price: 6000,
         image: 'images/best/papas_c.jpeg'
+      },
+      'bandeja_chica': {
+        name: 'Papas Bandeja',
+        price: 4000,
+        image: 'images/papas-bandeja-grande.jpg'
+      }
+    }
+  },
+  bebidas: {
+    name: 'Bebidas',
+    image: 'images/bebidas.jpg',
+    isBeverage: true,
+    products: {
+      pepsi: {
+        name: 'Lata Pepsi 354ml',
+        price: 1000
+      },
+      fanta: {
+        name: 'Botella Pepsi 2L',
+        price: 3000
+      },
+      sprite: {
+        name: 'NO DISPONIBLE',
+        price: 1
       }
     }
   }
+
 
 };
 
@@ -182,7 +290,7 @@ const ingredientImages = {
   'queso': 'images/ingredientes/queso.jpg',
   'huevo': 'images/ingredientes/huevo.jpg',
   'queso cheddar': 'images/ingredientes/cheddar.jpg',
-  'cebolla caramelizada': 'images/ingredientes/cebolla.jpg',
+  'cebolla': 'images/ingredientes/cebolla.jpg',
   'mayonesa': 'images/ingredientes/mayonesa.jpg',
   'mostaza': 'images/ingredientes/mostaza.jpg',
   'ketchup': 'images/ingredientes/ketchup.jpg',
@@ -936,10 +1044,7 @@ function sendWhatsApp() {
       return;
     }
     
-    if (linkGps === '') {
-      alert("Por favor, haz clic en el botón 'Obtener mi ubicación actual' para que el repartidor sepa llegar.");
-      return;
-    }
+    
   }
   
   // 3. Armar el encabezado del mensaje
@@ -947,16 +1052,18 @@ function sendWhatsApp() {
   message += `👤 *Cliente:* ${nombre}\n`;
   message += `🛵 *Entrega:* ${entrega}\n`;
   
-  // Agregamos Dirección, Referencia (solo si escribió algo) y GPS al mensaje
+  // Agregamos Dirección, Referencia y GPS (solo si está presente)
   if (entrega === 'Envío a domicilio') {
     message += `📍 *Dirección escrita:* ${direccionManual}\n`;
     
-    // Si el cliente escribió una referencia, la sumamos
     if (referencia !== '') {
       message += `🏠 *Referencia:* ${referencia}\n`;
     }
     
-    message += `🗺️ *Mapa (GPS):* ${linkGps}\n`;
+    // Solo agregamos el mapa si el usuario presionó el botón
+    if (linkGps !== '') {
+      message += `🗺️ *Mapa (GPS):* ${linkGps}\n`;
+    }
   }
   
   message += `💳 *Pago:* ${pago}\n`;
