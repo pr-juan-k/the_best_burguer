@@ -226,7 +226,7 @@ const menuData = {
         }
       },choclo_queso: {
         '12_unidades_c': {
-          name: 'Empanadas de choclo y queso "Horneadas" x16 ',
+          name: 'Empanadas de choclo y queso "Horneadas" x6 ',
           price: 7000,
           image: 'images/empanada.jpg'
         },
